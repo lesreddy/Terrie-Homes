@@ -16,7 +16,7 @@ def contact():
     return render_template("contact.html")
 
 @app.route("/listings")
-def careers():
+def listings():
     return render_template("listings.html")
 
 if __name__== "__main__":
