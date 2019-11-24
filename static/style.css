@@ -1,7 +1,22 @@
-* {
+@import url('https://fonts.googleapis.com/css?family=Esteban|Montserrat:400,500,600,700,800&display=swap');
+
+*, *::before, *::after {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #d9d9d9;
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh;
+}
+
+.full-height-grow {
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -9,9 +24,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 100;
-    background-color: #748aac;
+    background-color: #212f52;
 }
 
 .logo {
@@ -51,28 +64,54 @@ nav {
     transition: all 0.3 ease;
 }
 
-.wrapper {
-    width: 100%;
-    height: 100vh;
-    border: none;
-    position: relative;
-    
+ .brand {
+    flex-grow: 1;
+    background-color: d9d9d9;  
+} 
+
+.container {
+    max-width: 1200;
+    margin: 0 auto;
+    padding: 0 40px;
+    min-height: 100vh;
+    background-color: #d9d9d9;
 }
 
-.brand {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    left:50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("images/terrie.png");
+.title {
+    font-size: 4em;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-family: Montseratt, sans-serif;
+    font-weight: 800;
+    color: #212f52;
 }
 
+.subtitle {
+    font-size: 2.2em;
+    margin-bottom: 2rem;
+    font-family: esteban, sans-serif;
+    color: #212f52;
+}
 
+.btn {
+    color: white;
+    background-color: #212f52;
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
 
+.btn2 {
+    color: #212f52;
+    background-color: #FFCD0F;
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
 
 @media screen and (max-width: 1024px) {
    .nav-links{
@@ -90,7 +129,7 @@ nav {
        right: 0px;
        height: 92vh;
        top: 8vh;
-       background-color:#36454f;
+       background-color:#212f52;
        flex-direction: column;
        align-items: center; 
        width: 50%;
