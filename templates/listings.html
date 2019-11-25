@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Check out all the new homes!</h1>    
+    {% for listing in for_sale %}
+        {{listing.address}}
+        {{listing.property_type}}
+        {{listing.bedrooms}}
+        {{listing.bathrooms}}
+        {{listing.price}}
+    {% endfor %}
 {% endblock %}
