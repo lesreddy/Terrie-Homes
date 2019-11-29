@@ -19,7 +19,7 @@ def index():
 @app.route("/signin")
 def signin():
     if 'username' in session:
-        return 'You are logged in as' + session['username']
+        return 'You are logged in as ' + session['username']
     return render_template("signin.html")
 
 @app.route("/login", methods=['POST'])
@@ -28,9 +28,9 @@ def login():
     login_user = users.find_one({'name' : request.form['username']})
 
     if login_user:
-        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8)')) == login_user['password'].encode('utf-8'):
+        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
             session['username'] = request.form['username']
-            return redirect(url_for('signup'))
+            return redirect(url_for('signin'))
     return 'Invalid username/password combination'
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -43,7 +43,7 @@ def register():
             hashpass = bcrypt.hashpw(request.form['pass'].encode('utf-8'), bcrypt.gensalt())
             users.insert({'name' : request.form['username'], 'password' : hashpass})
             session['username'] = request.form['username']
-            return redirect(url_for('index'))
+            return redirect(url_for('signin'))
         
         return 'That username already exists!'
 
