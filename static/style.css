@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-body {
+#landing {
     padding: 0;
     margin: 0;
     background-color: #d9d9d9;
@@ -16,7 +16,6 @@ body {
 
 .full-height-grow {
     display: flex;
-    flex-direction: column;
 }
 
 nav {

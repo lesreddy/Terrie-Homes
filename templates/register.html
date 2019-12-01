@@ -1,18 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="form-contain">
-	<div class="form-wrap">
-		<form method=POST action="{{ url_for('register') }}">
-			<h1>Sign Up</h1>
-			<label for="exampleInputEmail1">Username</label>
-			<input type="text" name="username" placeholder="Username">
-			<label for="exampleInputPassword1">Password</label>
-			<input type="password" name="pass" placeholder="Password">
-			<input type="password" placeholder="Confirm Password">
-			<button class="btn2" type="submit" value="Sign Up">Sign Up</button>
-			<form>
-	</div>
-</div>
 
+<section id="main-form">
+    <div class="wrapper">
+        <div class="form-container">
+            <span class="form-heading">Sign up</span>
+            <form method=POST action="{{ url_for('register') }}">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="username" placeholder="Username..." required>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email..." required>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="pass" placeholder="Password..." required>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm password..." required>
+                    <span class="bar"></span>
+                </div>
+                <div class="input-group">
+                    <button class="btn3" type="submit" value="signup">
+                        <i class="fab fa-telegram-plane"></i>
+                    </button>
+                </div>
+                <div class="switch-login">
+                    <a href="#">Already have an account? <span>Login</span></a>
+                </div>
+            </form>
+        </div>
+    </div>  
+</section>
 
 {% endblock %}
