@@ -1,4 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Contact</h1>    
+    <section class="contact">
+        <div class="title contactus">Contact Us</div>
+		<div class="message">
+			<form>
+				<div class="div">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" placeholder="Name" required>
+				</div>
+				<div class="div">
+					<label for="email">Email</label>
+					<input type="email" name="Email" id="email" id="email" placeholder="Email" required>
+				</div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea type="text" rows="4" id="message" placeholder="Message" required></textarea>
+                </div>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+    </section>   
 {% endblock %}

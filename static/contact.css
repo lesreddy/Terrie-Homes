@@ -1,0 +1,23 @@
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100vh;
+}
+
+.contactus {
+    align-self: center;
+    font-size: 6rem;
+}
+
+.message {
+    align-self: center;
+    font-size: 2rem;
+}
+
+.form-group {
+}
+
+.label {
+    display: block;
+}
