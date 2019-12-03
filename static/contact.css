@@ -8,16 +8,102 @@
 .contactus {
     align-self: center;
     font-size: 6rem;
+    flex-grow: 1;
+    text-align: center;
 }
 
 .message {
     align-self: center;
     font-size: 2rem;
+    background-color: #ED9A0A;
+    height: 100vh;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 600px;
+    border-top-left-radius: 600px;
 }
 
 .form-group {
 }
 
-.label {
+label{
     display: block;
+    padding: 1rem 0 0.5rem;
+}
+
+input, textarea{
+    display: block;
+    line-height: 3;
+    border-style: none;
+    padding: 0.5rem 1rem;
+}
+
+.btn4{
+    color: white;
+    background: #212f52;
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: Montserrat, sans-serif;
+    border-style: none;
+    outline-style: none;
+    cursor:pointer;
+    transition: .75s background-color ease;
+    text-transform: uppercase;
+
+}
+
+.btn4:hover {
+        background: #717A90;
+    }
+
+.btn4:focus{
+    outline: none;
+}
+
+.form-wrap2 {
+    margin: auto;
+    width: 320px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background: #ED9A0A;
+    box-shadow: none;
+}
+
+.label-contain {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-label{
+    flex-grow: 1;
+    display:flex;
+    flex-direction: column;
+    font-family: montserrat, sans-serif;
+    font-weight: 600;
+    color:#212f52; 
+    font-size:2.25rem;
+}
+
+textarea {
+    font-family: sans-serif;
+}
+
+#bwrap{
+    text-align: center;
+    margin-top: 10px;
+    }
+
+@media screen and (max-width: 768px) {
+    .contact {
+    flex-wrap: wrap;
+    margin: auto;
+    }
+    .message {
+    background-color: #d9d9d9;
+    margin: auto;
+    }
 }
