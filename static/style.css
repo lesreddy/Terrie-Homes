@@ -35,6 +35,7 @@ nav {
     display: flex;
     justify-content: space-around;
     width: 40%;
+    z-index: 5;
 }
 
 .nav-links li {
@@ -47,7 +48,22 @@ nav {
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px;
+    transition: .5s color ease;
+    
 }
+
+.logo h4{
+    transition: .5s color ease;
+}
+
+.logo h4:hover{
+        color: #d9d9d9;
+}
+
+.nav-links a:hover{
+        color: #d9d9d9;
+}
+
 
 .burger{
     display: none;
@@ -64,7 +80,7 @@ nav {
 
  .brand {
     flex-grow: 1;
-    background-color: d9d9d9;  
+    background-color: #d9d9d9;  
 } 
 
 .container {
@@ -97,19 +113,33 @@ nav {
     padding: .75rem 1.5rem;
     border-radius: .5rem;
     text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: .75s background-color ease;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #717A90;
 }
 
 .btn2 {
     color: #212f52;
-    background-color: #FFCD0F;
+    background-color: #ED9A0A;
     padding: .75rem 1.5rem;
     border-radius: .5rem;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.25rem;
     font-weight: 600;
+    transition: .75s background-color ease;
+    text-transform: uppercase;
+    
 }
+
+.btn2:hover {
+        background: #f9cb07;
+    }
+
 
 .form-wrap {
     width: 320px;
@@ -177,7 +207,8 @@ nav {
 
 
 .nav-active{
-    transform: translateX(0%)
+    transform: translateX(0%);
+    z-index: 5;
 }
 
 @keyframes navLinkFade{
