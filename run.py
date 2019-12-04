@@ -16,21 +16,24 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html")
 
+@app.route("/dashboard")
+def dashboard():
+    if 'username' in session:
+        return render_template("dashboard.html")
+    return render_template("dashboard.html")
+
 @app.route("/signin")
 def signin():
-    if 'username' in session:
-        return 'You are logged in as ' + session['username']
     return render_template("signin.html")
 
 @app.route("/login", methods=['POST'])
 def login():
     users = mongo.db.users
     login_user = users.find_one({'name' : request.form['username']})
-
     if login_user:
-        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
+        if (bcrypt.checkpw(request.form['pass'].encode('utf-8'), login_user['password'])):
             session['username'] = request.form['username']
-            return redirect(url_for('signin'))
+            return redirect(url_for('dashboard'))
     return 'Invalid username/password combination'
 
 @app.route('/register', methods=['POST', 'GET'])

@@ -26,11 +26,23 @@ nav {
     background-color: #212f52;
 }
 
-.logo {
+.logo h4 a{
     color: white;
     letter-spacing: 5px;
     font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .5s color ease;
 }
+
+.logo h4 a{
+    transition: .5s color ease;
+}
+
+.logo h4 a:hover{
+        color: #d9d9d9;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-around;
@@ -48,16 +60,7 @@ nav {
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px;
-    transition: .5s color ease;
-    
-}
-
-.logo h4{
-    transition: .5s color ease;
-}
-
-.logo h4:hover{
-        color: #d9d9d9;
+    transition: .5s color ease;   
 }
 
 .nav-links a:hover{
@@ -111,7 +114,7 @@ nav {
     color: white;
     background-color: #212f52;
     padding: .75rem 1.5rem;
-    border-radius: .5rem;
+    border-radius: 2.5rem;
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: 600;
@@ -120,14 +123,14 @@ nav {
 }
 
 .btn:hover {
-    background-color: #717A90;
+    background-color: #4e5c80;
 }
 
 .btn2 {
     color: #212f52;
     background-color: #ED9A0A;
     padding: .75rem 1.5rem;
-    border-radius: .5rem;
+    border-radius: 2.5rem;
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: 600;
