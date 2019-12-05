@@ -60,6 +60,13 @@ def contact():
 def listings():
     return render_template("listings.html", for_sale=mongo.db.for_sale.find())
 
+@app.route("/insert_listings", methods=['POST'])
+def insert_listings():
+    listings = mongo.db.for_sale
+    listings.insert_one(request.form.to_dict())
+    return redirect(url_for('listings'))
+
+
 if __name__== "__main__":
     app.secret_key = 'mysecret'
     app.run(host=os.environ.get("IP"),

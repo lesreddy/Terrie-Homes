@@ -20,7 +20,7 @@
 		<div class="sectionlisting">
             <div class="listingheader">New Listing
             </div>
-            <form class="dashform">
+            <form action="{{ url_for('insert_listings') }}" method="POST" class="dashform">
 				<div class="label-contain">
 					<label id="form-label" for="address">Address</label>
 					<input type="text" name="address" id="message form-label" required>
@@ -38,11 +38,11 @@
                     <input type="text" name="house" id="message form-label" required>
                 </div>
                 <div class="label-contain">
-                    <label id="form-label" for="houseimage">Attach Image</label>
-                    <input type="text" name="houseimage" id="message form-label" required>
+                    <label id="form-label" for="price">Price</label>
+                    <input type="text" name="price" id="message form-label" required>
                 </div>
                 <div id="bwrap">
-				<button class="btn4" type="submit">Submit</button>
+				<button class="btn4" type="submit" name="action">Add Listing</button>
                 </div>
 			</form>
 		</div>
