@@ -1,4 +1,50 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>Welcome to your Dashboard {{session['username']}}</h1>
+    <div class="side-nav">
+		<div class="dashtitle">
+			<i class="fa fa-tachometer"></i>
+			<span>{{session['username']}}</span>
+		</div>
+		<header>
+			<ul>
+				<li>
+					<a href="#">
+						<span><i class="fas fa-home"></i></span>
+						<span class="newlisting">New Listing</span>
+					</a>
+				</li>			
+			</ul>
+		</header>
+	</div>
+	<div class="dashsection">
+		<div class="sectionlisting">
+            <div class="listingheader">New Listing
+            </div>
+            <form class="dashform">
+				<div class="label-contain">
+					<label id="form-label" for="address">Address</label>
+					<input type="text" name="address" id="message form-label" required>
+				</div>
+				<div class="label-contain">
+					<label id="form-label" for="bedrooms">Bedrooms</label>
+					<input type="text" name="bedrooms" id="message form-label" required>
+				</div>
+                <div class="label-contain">
+                    <label id="form-label" for="bathrooms">Bathrooms</label>
+                    <input type="text" name="bathrooms" id="message form-label" required>
+                </div>
+                <div class="label-contain">
+                    <label id="form-label" for="house">House Type</label>
+                    <input type="text" name="house" id="message form-label" required>
+                </div>
+                <div class="label-contain">
+                    <label id="form-label" for="houseimage">Attach Image</label>
+                    <input type="text" name="houseimage" id="message form-label" required>
+                </div>
+                <div id="bwrap">
+				<button class="btn4" type="submit">Submit</button>
+                </div>
+			</form>
+		</div>
+	</div>
 {% endblock %}
