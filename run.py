@@ -58,7 +58,7 @@ def contact():
 
 @app.route("/listings")
 def listings():
-    return render_template("listings.html", for_sale=mongo.db.for_sale.find())
+    return render_template("listings.html", for_sale=mongo.db.for_sale.find())    
 
 @app.route("/insert_listings", methods=['POST'])
 def insert_listings():

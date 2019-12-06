@@ -8,11 +8,42 @@
         <button class="btn3">Enquire</button>
         </div>
 </section>
-    {% for listing in for_sale %}
-        {{listing.address}}
-        {{listing.property_type}}
-        {{listing.bedrooms}}
-        {{listing.bathrooms}}
-        {{listing.price}}
-    {% endfor %}
+<main>
+    <ul>
+        {% for listing in for_sale %}
+        <div class="house-image">
+        </div>     
+		<div class="list-wrapper">
+			<li class="list-style">
+                <div class="icon-wrap">
+                    <i class="fas fa-address-card"></i>
+                </div>
+                <p class="data">{{listing.address}}</p>
+            </li>
+			<li class="list-style">
+                <div class="icon-wrap">
+                    <i class="fas fa-home"></i>
+                </div>
+                <p class="data">{{listing.property_type}}</p>
+            </li>
+			<li class="list-style">
+                <div class="icon-wrap">
+                    <i class="fas fa-bed"></i>
+                </div>
+                <p class="data">{{listing.bedrooms}}</p>
+            </li>
+			<li class="list-style">
+                <div class="icon-wrap">
+                    <i class="fas fa-toilet"></i>
+                </div>
+                <p class="data">{{listing.bathrooms}}</p>
+            </li>
+			<li id="price-style">
+                <p class="price">{{listing.price}}</p>
+            </li>
+		</div>
+        {% endfor %}
+    </ul>
+</main>
 {% endblock %}
+
