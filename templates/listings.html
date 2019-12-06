@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<section class="hero">
+        <div class="callout-wrapper">
+        <h1>Houses For Sale</h1>
+        <h4>You list it, we sell it!</h4>
+        <button class="btn3">Enquire</button>
+        </div>
+</section>
     {% for listing in for_sale %}
         {{listing.address}}
         {{listing.property_type}}
