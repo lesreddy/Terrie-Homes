@@ -1,7 +1,7 @@
 import env
 import os
 from flask import Flask, render_template, redirect, request, url_for, session
-from flask_pymongo import PyMongo
+import pymongo
 from bson.objectid import ObjectId
 
 app = Flask(__name__)
