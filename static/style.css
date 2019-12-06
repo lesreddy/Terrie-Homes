@@ -523,7 +523,7 @@ html{
     width: 100%;
 }
 
-.btn3{
+.regbtn{
     margin: 3rem auto;
     padding: 1rem 5rem;
     background: #212f52;
@@ -535,7 +535,7 @@ html{
     transition: .75s background-color ease;   
 }
 
-.btn3:hover {
+.regbtn:hover {
         background: #4e5c80;
     }
 
@@ -663,11 +663,11 @@ header ul li{
 }
 
 .callout-wrapper {
-    background:#ED9A0A;
+    background:rgba(237, 154, 10, 0.7);
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 80vw;
     border-radius: 10px;
     font-size: 16px;
 }
@@ -691,7 +691,7 @@ header ul li{
     background: #212f52;
     border: none;
     color: #fff;
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
     border-radius: 2.5rem;
     transition: .75s background-color ease;   
@@ -743,12 +743,21 @@ p.list-style {
 }
 
 #price-style{
-    font-size: 3rem;
     text-transform: uppercase;
     font-family: esteban, sans-serif;
     padding: 5px;
     color:#18234C;
     display: flex;
     justify-content: center;
-    font-weight: 700;
+    
     }
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.mainlist{
+    display: flex;
+    flex-wrap: wrap;
+}
