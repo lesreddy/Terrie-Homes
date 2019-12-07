@@ -244,6 +244,7 @@ nav {
     align-items: stretch;
     justify-content: space-between;
     flex-grow: 1;
+    font-size: 2rem;
 }
 
 .img-wrapper {
@@ -715,6 +716,7 @@ header ul li{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .callout-wrapper {

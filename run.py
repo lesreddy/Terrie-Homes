@@ -67,8 +67,13 @@ def insert_listings():
     return redirect(url_for('dashboard'))
 
 
+@app.route('/edit_listing/<listing_id>')
+def edit_listing(listing_id):
+    the_listing = mongo.db.for_sale.find_one({"_id": ObjectId(listing_id)})
+    return render_template('edit_listing.html', listing=the_listing)
+
 if __name__== "__main__":
     app.secret_key = 'mysecret'
     app.run(host=os.environ.get("IP"),
     port=int(os.environ.get("PORT")),
-    debug=False)
+    debug=True)
