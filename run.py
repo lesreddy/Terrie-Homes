@@ -19,7 +19,7 @@ def index():
 @app.route("/dashboard")
 def dashboard():
     if 'username' in session:
-        return render_template("dashboard.html")
+        return render_template("dashboard.html",for_sale=mongo.db.for_sale.find())
     return render_template("dashboard.html")
 
 @app.route("/signin")

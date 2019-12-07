@@ -589,10 +589,21 @@ html{
     justify-content: flex-start;
 }
 
+.dashsection-wrapper{
+    height: 100vh;
+    display: flex;
+}
 .dashtitle i{
     font-size:22px;
     color: #fff;
     padding: 14px;
+}
+
+.dashsection{
+    display: flex;
+    margin-left: 250px;
+    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .dashtitle span{
@@ -613,6 +624,7 @@ header span i{
     font-size: 2rem;
     color:#212f52;
     font-weight: 600;
+    font-family: montserrat, sans-serif;
 }
 
 header ul li a{
@@ -634,11 +646,8 @@ header ul li{
 .sectionlisting {
     display: flex;
     flex-direction: column;
-    margin-left: 250px;
     background: #c4c4c4;
-    min-width: 50%;
     margin-right: 25px;
-    margin-top:25px;
 }
 
 .dashform {
