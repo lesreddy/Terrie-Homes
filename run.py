@@ -64,7 +64,7 @@ def listings():
 def insert_listings():
     listings = mongo.db.for_sale
     listings.insert_one(request.form.to_dict())
-    return redirect(url_for('listings'))
+    return redirect(url_for('dashboard'))
 
 
 if __name__== "__main__":

@@ -28,13 +28,11 @@
 			</ul>
 		</header>
 	</div>
-    <div class="dashsection-wrapper">
-    
-	<div class="dashsection">
+    <div class="dashsection-wrapper"> 
 		<div class="sectionlisting">
-            <div class="listingheader">New Listing
-            </div>
-            <form action="{{ url_for('insert_listings') }}" method="POST" class="dashform">
+			<div class="listingheader">New Listing
+			</div>
+			<form action="{{ url_for('insert_listings') }}" method="POST" class="dashform">
 				<div class="label-contain">
 					<label id="form-label" for="address">Address</label>
 					<input type="text" name="address" id="message form-label" required>
@@ -43,83 +41,25 @@
 					<label id="form-label" for="bedrooms">Bedrooms</label>
 					<input type="text" name="bedrooms" id="message form-label" required>
 				</div>
-                <div class="label-contain">
-                    <label id="form-label" for="bathrooms">Bathrooms</label>
-                    <input type="text" name="bathrooms" id="message form-label" required>
-                </div>
-                <div class="label-contain">
-                    <label id="form-label" for="property_type">House Type</label>
-                    <input type="text" name="property_type" id="message form-label" required>
-                </div>
-                <div class="label-contain">
-                    <label id="form-label" for="price">Price</label>
-                    <input type="text" name="price" id="message form-label" required>
-                </div>
-                <div id="bwrap">
-				<button class="btn4" type="submit" name="action">Add</button>
-                </div>
-			</form>
-		</div>
-        <div class="sectionlisting">
-            <div class="listingheader">Edit Listing
-            </div>
-            <form action="{{ url_for('insert_listings') }}" method="POST" class="dashform">
 				<div class="label-contain">
-					<label id="form-label" for="address">Address</label>
-					<input type="text" name="address" id="message form-label" required>
-				</div>
+					<label id="form-label" for="bathrooms">Bathrooms</label>
+					<input type="text" name="bathrooms" id="message form-label" required>
+	            </div>
 				<div class="label-contain">
-					<label id="form-label" for="bedrooms">Bedrooms</label>
-					<input type="text" name="bedrooms" id="message form-label" required>
-				</div>
-                <div class="label-contain">
-                    <label id="form-label" for="bathrooms">Bathrooms</label>
-                    <input type="text" name="bathrooms" id="message form-label" required>
-                </div>
-                <div class="label-contain">
-                    <label id="form-label" for="property_type">House Type</label>
-                    <input type="text" name="property_type" id="message form-label" required>
-                </div>
-                <div class="label-contain">
-                    <label id="form-label" for="price">Price</label>
-                    <input type="text" name="price" id="message form-label" required>
-                </div>
-                <div id="bwrap">
-				<button class="btn4" type="submit" name="action">Edit</button>
-                </div>
-			</form>
-		</div>
-        <div class="sectionlisting">
-            <div class="listingheader">Delete Listing
-            </div>
-            <form action="{{ url_for('insert_listings') }}" method="POST" class="dashform">
+				    <label id="form-label" for="property_type">House Type</label>
+					<input type="text" name="property_type" id="message form-label" required>
+	            </div>
 				<div class="label-contain">
-					<label id="form-label" for="address">Address</label>
-					<input type="text" name="address" id="message form-label" required>
-				</div>
-				<div class="label-contain">
-					<label id="form-label" for="bedrooms">Bedrooms</label>
-					<input type="text" name="bedrooms" id="message form-label" required>
-				</div>
-                <div class="label-contain">
-                    <label id="form-label" for="bathrooms">Bathrooms</label>
-                    <input type="text" name="bathrooms" id="message form-label" required>
-                </div>
-                <div class="label-contain">
-                    <label id="form-label" for="property_type">House Type</label>
-                    <input type="text" name="property_type" id="message form-label" required>
-                </div>
-                <div class="label-contain">
-                    <label id="form-label" for="price">Price</label>
-                    <input type="text" name="price" id="message form-label" required>
-                </div>
-                <div id="bwrap">
-				<button class="btn4" type="submit" name="action">Delete</button>
+					<label id="form-label" for="price">Price</label>
+					<input type="text" name="price" id="message form-label" required>
+	            </div>
+				<div id="btnwrap">
+                	<button class="dshbtn" type="submit" name="action">Add</button>
                 </div>
 			</form>
 		</div>
         {% for listing in for_sale %}
-    <div class="listing-wrapper">
+        <div class="listing-wrapper">
         <ul>
             <div class="house-image">
             </div>     
@@ -151,11 +91,13 @@
 			    <li id="price-style">
                     <p class="price">{{listing.price}}</p>
                 </li>
+                <div class="btnwrap">
+                    <button class="dshbtn">Edit</button>
+                    <button class="dshbtn">Delete</button>
+                </div>
 		    </div>
         </ul>
-    </div>
+        </div>
     {% endfor %}
-    </div>
-     
     </div>
 {% endblock %}

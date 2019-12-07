@@ -11,7 +11,7 @@
     margin: 0;
     background-color: #d9d9d9;
     font-family: Montserrat, sans-serif;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 .full-height-grow {
@@ -581,7 +581,7 @@ html{
 .side-nav {
 	position: absolute;
 	width: 200px;
-	height: 100vh;
+	height: 100%;
 	background-color: #ED9A0A;
     z-index: 1;
     display: flex;
@@ -590,8 +590,12 @@ html{
 }
 
 .dashsection-wrapper{
-    height: 100vh;
     display: flex;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    margin-left: 250px;
 }
 .dashtitle i{
     font-size:22px;
@@ -646,15 +650,57 @@ header ul li{
 .sectionlisting {
     display: flex;
     flex-direction: column;
-    background: #c4c4c4;
-    margin-right: 25px;
+    min-width: 50%;
+    margin-bottom: 20px;
+    margin-right: 20px
 }
 
 .dashform {
     display: flex;
     flex-direction: column;
     background: #c4c4c4;
-    padding: 25px;
+    padding: 0px 19px;
+}
+
+.dshbtn{
+    margin: 3rem auto;
+    padding: 1rem 5rem;
+    background: #212f52;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: Montserrat, sans-serif;
+    cursor: pointer;
+    border-radius: 2.5rem;
+    transition: .75s background-color ease;   
+}
+
+.dshbtn:hover {
+        background: #4e5c80;
+    }
+
+.btnwrap {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 19px;
+}
+
+@media screen and (max-width: 700px){
+    .side-nav{
+        display: none;
+    }
+
+    .dashsection-wrapper{
+        margin-left: auto;
+        justify-content: space-around;      
+    }
+    .sectionlisting {
+        min-width: 100%;
+    }
+
+
 }
 
 /* listing page */
@@ -739,6 +785,11 @@ header ul li{
     background-color: #fff;
 }
 
+.listing-wrapper {
+    padding: 0 5px;
+    padding-bottom: 10px
+}
+
 p.list-style {
     justify-content: center;
 }
@@ -769,4 +820,5 @@ p.list-style {
 .mainlist{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
