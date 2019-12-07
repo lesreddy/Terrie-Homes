@@ -318,12 +318,10 @@ nav {
     border-top-left-radius: 600px;
 }
 
-.form-group {
-}
 
 label{
     display: block;
-    padding: 1rem 0 0.5rem;
+    padding: 0.5rem 0 0.5rem;
 }
 
 input, textarea{
@@ -372,10 +370,7 @@ input, textarea{
     flex-direction: column;
 }
 
-#form-label{
-    flex-grow: 1;
-    display:flex;
-    flex-direction: column;
+.form-label{
     font-family: montserrat, sans-serif;
     font-weight: 600;
     color:#212f52; 
@@ -646,6 +641,8 @@ header ul li{
     padding: 5px 25px;
     font-weight: 600;
     color: #212f52;
+    text-align: center;
+    width: 100%;
 }
 
 .sectionlisting {
@@ -675,6 +672,7 @@ header ul li{
     cursor: pointer;
     border-radius: 2.5rem;
     transition: .75s background-color ease;   
+    text-decoration: none;
 }
 
 .dshbtn:hover {
@@ -688,6 +686,9 @@ header ul li{
     margin-top: 19px;
 }
 
+#btnwrap {
+    text-align: center;
+}
 @media screen and (max-width: 700px){
     .side-nav{
         display: none;
@@ -811,7 +812,7 @@ p.list-style {
     color:#18234C;
     display: flex;
     justify-content: center;
-    
+    margin: 18px 0px;    
     }
 
 .price {

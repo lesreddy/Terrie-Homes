@@ -34,24 +34,24 @@
 			</div>
 			<form action="{{ url_for('insert_listings') }}" method="POST" class="dashform">
 				<div class="label-contain">
-					<label id="form-label" for="address">Address</label>
-					<input type="text" name="address" id="message form-label" required>
+					<label class="form-label" id="adress" for="address">Address</label>
+					<input class="form-label" type="text" name="address" id="address" required>
+				</div>
+                <div class="label-contain">
+					<label class="form-label" id="bedrooms" for="bedrooms">Bedrooms</label>
+					<input class="form-label" type="text" name="bedrooms" id="bedrooms" required>
 				</div>
 				<div class="label-contain">
-					<label id="form-label" for="bedrooms">Bedrooms</label>
-					<input type="text" name="bedrooms" id="message form-label" required>
-				</div>
-				<div class="label-contain">
-					<label id="form-label" for="bathrooms">Bathrooms</label>
-					<input type="text" name="bathrooms" id="message form-label" required>
+					<label class="form-label" id="bathrooms" for="bathrooms">Bathrooms</label>
+					<input class="form-label" type="text" name="bathrooms" id="bathrooms" required>
 	            </div>
 				<div class="label-contain">
-				    <label id="form-label" for="property_type">House Type</label>
-					<input type="text" name="property_type" id="message form-label" required>
+				    <label class="form-label" id="property_type" for="property_type">House Type</label>
+					<input class="form-label" type="text" name="property_type" id="property_type" required>
 	            </div>
 				<div class="label-contain">
-					<label id="form-label" for="price">Price</label>
-					<input type="text" name="price" id="message form-label" required>
+					<label class="form-label" id="price" for="price">Price</label>
+					<input class="form-label" type="text" name="price" id="price" required>
 	            </div>
 				<div id="btnwrap">
                 	<button class="dshbtn" type="submit" name="action">Add</button>
@@ -92,8 +92,8 @@
                     <p class="price">{{listing.price}}</p>
                 </li>
                 <div class="btnwrap">
-                    <a href="{{url_for('edit_listing', listing_id=listing._id)}}"><button class="dshbtn">Edit</button></a>
-                    <button class="dshbtn">Delete</button>
+                    <a href="{{ url_for('edit_listing', listing_id=listing._id) }}" class="dshbtn">Edit</a>
+                    <a href="#" class="dshbtn">Del</a>
                 </div>
 		    </div>
         </ul>
