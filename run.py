@@ -66,11 +66,28 @@ def insert_listings():
     listings.insert_one(request.form.to_dict())
     return redirect(url_for('dashboard'))
 
-
 @app.route("/edit_listing/<listing_id>")
 def edit_listing(listing_id):
     the_listing = mongo.db.for_sale.find_one({"_id": ObjectId(listing_id)})
-    return render_template("edit_listing.html", listing=the_listing)
+    return render_template("editlisting.html", listing=the_listing)
+
+@app.route("/update_listing/<listing_id>", methods=["POST"])
+def update_listing(listing_id):
+    listing = mongo.db.for_sale
+    listing.update( {'_id': ObjectId(listing_id)},
+    {
+        'address':request.form.get('address'),
+        'bedrooms':request.form.get('bedrooms'),
+        'bathrooms': request.form.get('bathrooms'),
+        'property_type': request.form.get('property_type'),
+        'price':request.form.get('price')
+    })
+    return redirect(url_for('dashboard'))
+
+@app.route('/delete_listing/<listing_id>')
+def delete_listing(listing_id):
+    mongo.db.for_sale.remove({'_id': ObjectId(listing_id)})
+    return redirect(url_for('dashboard'))
 
 if __name__== "__main__":
     app.secret_key = 'mysecret'

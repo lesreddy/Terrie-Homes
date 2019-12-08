@@ -765,8 +765,8 @@ header ul li{
 /* listings page for loop from mongo */
 
 
-.house-image {
-    background-image: url('images/construction-house-architecture-luxury-53610.jpg');
+.house-img {
+    background-image: url('images/whitehouse.jpg');
     background-size: cover;
     background-position: center;
     width: 300px;

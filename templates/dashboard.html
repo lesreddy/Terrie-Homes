@@ -11,19 +11,19 @@
                     <div class="icon-wrap">
 						<i class="fas fa-home"></i>
                     </div>
-                    <p class="newlisting">New Listing</span>
+                    <p class="newlisting">New Listing</p>
 				</li>
                 <li class="list-style">
                     <div class="icon-wrap">
 						<i class="fas fa-home"></i>
                     </div>
-                    <p class="newlisting">Edit Listing</span>
+                    <p class="newlisting">Edit Listing</p>
 				</li>
                 <li class="list-style">
                     <div class="icon-wrap">
 						<i class="fas fa-home"></i>
                     </div>
-                    <p class="newlisting">Delete Listing</span>
+                    <p class="newlisting">Delete Listing</p>
 				</li>
 			</ul>
 		</header>
@@ -34,7 +34,7 @@
 			</div>
 			<form action="{{ url_for('insert_listings') }}" method="POST" class="dashform">
 				<div class="label-contain">
-					<label class="form-label" id="adress" for="address">Address</label>
+					<label class="form-label" id="address" for="address">Address</label>
 					<input class="form-label" type="text" name="address" id="address" required>
 				</div>
                 <div class="label-contain">
@@ -61,7 +61,7 @@
         {% for listing in for_sale %}
         <div class="listing-wrapper">
         <ul>
-            <div class="house-image">
+            <div class="house-img">
             </div>     
 		    <div class="list-wrapper">
 			    <li class="list-style">
@@ -93,7 +93,7 @@
                 </li>
                 <div class="btnwrap">
                     <a href="{{ url_for('edit_listing', listing_id=listing._id) }}" class="dshbtn">Edit</a>
-                    <a href="#" class="dshbtn">Del</a>
+                    <a href="{{ url_for('delete_listing', listing_id=listing._id) }}" class="dshbtn">Del</a>
                 </div>
 		    </div>
         </ul>

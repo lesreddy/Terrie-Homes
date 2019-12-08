@@ -11,19 +11,19 @@
                     <div class="icon-wrap">
 						<i class="fas fa-home"></i>
                     </div>
-                    <p class="newlisting">New Listing</span>
+                    <p class="newlisting">New Listing</p>
 				</li>
                 <li class="list-style">
                     <div class="icon-wrap">
 						<i class="fas fa-home"></i>
                     </div>
-                    <p class="newlisting">Edit Listing</span>
+                    <p class="newlisting">Edit Listing</p>
 				</li>
                 <li class="list-style">
                     <div class="icon-wrap">
 						<i class="fas fa-home"></i>
                     </div>
-                    <p class="newlisting">Delete Listing</span>
+                    <p class="newlisting">Delete Listing</p>
 				</li>
 			</ul>
 		</header>
@@ -32,32 +32,33 @@
 		<div class="sectionlisting">
 			<div class="listingheader">New Listing
 			</div>
-			<form action="{{ url_for('insert_listings') }}" method="POST" class="dashform">
+			<form action="{{ url_for('update_listing', listing_id=listing._id) }}" method="POST" class="dashform">
 				<div class="label-contain">
 					<label class="form-label" id="adress" for="address">Address</label>
-					<input class="form-label" type="text" name="address" id="address" required>
+					<input class="form-label" type="text" name="address" id="address" value="{{listing.address}}" required>
 				</div>
 				<div class="label-contain">
 					<label class="form-label" id="bedrooms" for="bedrooms">Bedrooms</label>
-					<input class="form-label" type="text" name="bedrooms" id="bedrooms" required>
+					<input class="form-label" type="text" name="bedrooms" id="bedrooms" value="{{listing.bedrooms}}" required>
 				</div>
 				<div class="label-contain">
 					<label class="form-label" id="bathrooms" for="bathrooms">Bathrooms</label>
-					<input type="text" name="bathrooms" id="bathrooms" required>
+					<input type="text" name="bathrooms" id="bathrooms" value="{{listing.bathrooms}}" required>
 	            </div>
 				<div class="label-contain">
 				    <label class="form-label" id="property_type" for="property_type">House Type</label>
-					<input class="form-label" type="text" name="property_type" id="property_type" required>
+					<input class="form-label" type="text" name="property_type" id="property_type" value="{{listing.property_type}}" required>
 	            </div>
 				<div class="label-contain">
 					<label class="form-label" id="price" for="price">Price</label>
-					<input class="form-label" type="text" name="price" id="price" required>
+					<input class="form-label" type="text" name="price" id="price" value="{{listing.price}}" required>
 	            </div>
 				<div id="btnwrap">
-                	<button class="dshbtn" type="submit" name="action">Add</button>
+                	<button class="dshbtn" type="submit" name="action">Update</button>
                 </div>
 			</form>
 		</div>
+    
 <!---       {% for listing in for_sale %}
         <div class="listing-wrapper">
         <ul>
@@ -101,3 +102,4 @@
     {% endfor %} --> 
     </div>
 {% endblock %}
+
