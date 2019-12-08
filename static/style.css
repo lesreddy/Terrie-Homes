@@ -103,6 +103,9 @@ nav {
     color: #212f52;
 }
 
+.call-to-action h1 {
+    font-size: 4em;
+}
 .subtitle {
     font-size: 2.2em;
     margin-bottom: 2rem;
@@ -356,6 +359,7 @@ input, textarea{
     cursor:pointer;
     transition: .75s background-color ease;
     text-transform: uppercase;
+    margin: 1rem 0;
 
 }
 
@@ -779,6 +783,7 @@ header ul li{
     text-transform: uppercase;
     font-family: montserrat, sans-serif;
     font-weight: 500;
+    width: 80px;
 }
 
 .btn3:hover {
