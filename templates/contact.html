@@ -5,11 +5,13 @@
         <p class="title">Contact Us</p>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-        <ul class="flashes">
+        <div class="div">
+        <ul>
                 {% for message in messages %}
-                <li>{{ message }}</li>
+                <li><span class="flashes">{{ message }}</span></li>
                 {% endfor %}
         </ul>
+        </div>
         {% endif %}
         {% endwith %}
         

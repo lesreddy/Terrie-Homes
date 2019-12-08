@@ -95,7 +95,7 @@ nav {
 }
 
 .title {
-    font-size: 4em;
+    font-size: 1.5em;
     margin-bottom: 1rem;
     margin-top: 0;
     font-family: Montseratt, sans-serif;
@@ -398,19 +398,30 @@ textarea {
     margin-top: 10px;
     }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 583px) and (max-width: 1099px) {
     .contact {
     flex-wrap: wrap;
     margin: auto;
     }
     .message {
-    background-color: #d9d9d9;
+    background: none;
     margin: auto;
     height:80vh;
     }
     .contactus {
-    font-size: 3rem;
     padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 582px){
+    .message {
+        height: 0vh;
+        background: none;
+    }
+    .contact {
+    flex-wrap: wrap;
+    margin: auto;
+    height: 35vh;
     }
 }
 
