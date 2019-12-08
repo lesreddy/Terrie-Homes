@@ -375,6 +375,7 @@ input, textarea{
     font-weight: 600;
     color:#212f52; 
     font-size:2.25rem;
+    text-transform: uppercase;
 }
 
 textarea {
