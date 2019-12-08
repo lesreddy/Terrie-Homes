@@ -1,11 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
     <section class="contact">
-        <div class="title contactus">Contact Us</div>
+        <div class="contactus">
+        <p class="title">Contact Us</p>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class="flashes">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        
+        </div>
+        
 		<div class="message">
             <div class="message-wrap">
             </div>
-			<form class="form-wrap2">
+			<form method="POST" class="form-wrap2">
 				<div class="label-contain">
 					<label class="form-label" id="name" for="name">Name</label>
 					<input type="text" name="name" id="name" required>
@@ -16,7 +29,7 @@
 				</div>
                 <div class="label-contain">
                     <label class="form-label" id="message" for="message">Message</label>
-                    <textarea type="text" rows="4" id="message" required></textarea>
+                    <textarea type="text" rows="4" name="message" id="message" required></textarea>
                 </div>
                 <div id="bwrap">
 				<button class="btn4" type="submit">Submit</button>

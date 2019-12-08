@@ -1,6 +1,6 @@
 import env
 import os
-from flask import Flask, render_template, redirect, request, url_for, session
+from flask import Flask, render_template, redirect, request, url_for, session, flash
 from bson.objectid import ObjectId
 from flask_pymongo import PyMongo
 import bcrypt
@@ -52,8 +52,10 @@ def register():
 
     return render_template('register.html')
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        flash ("Thanks {}, we have received your message!".format(request.form["name"]))
     return render_template("contact.html")
 
 @app.route("/listings")

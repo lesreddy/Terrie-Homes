@@ -318,6 +318,17 @@ nav {
     border-top-left-radius: 600px;
 }
 
+.flashes {
+    list-style: none;
+    font-family: montserrat;
+    font-size: 2rem;
+    padding: 10px;
+    font-weight: 600;
+    color: #ed9a0a;
+    background: #212f52;
+    text-transform: uppercase;
+}
+
 
 label{
     display: block;
