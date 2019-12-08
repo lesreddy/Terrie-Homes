@@ -6,12 +6,9 @@
     box-sizing: border-box;
 }
 
-#landing {
-    padding: 0;
-    margin: 0;
+body {
     background-color: #d9d9d9;
-    font-family: Montserrat, sans-serif;
-    min-height: 100%;
+    
 }
 
 .full-height-grow {
@@ -24,6 +21,7 @@ nav {
     align-items: center;
     min-height: 8vh;
     background-color: #212f52;
+    font-family: Montserrat, sans-serif;
 }
 
 .logo h4 a{
@@ -119,10 +117,11 @@ nav {
     padding: .75rem 1.5rem;
     border-radius: 2.5rem;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     font-weight: 600;
     transition: .75s background-color ease;
     text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
 }
 
 .btn:hover {
@@ -135,10 +134,11 @@ nav {
     padding: .75rem 1.5rem;
     border-radius: 2.5rem;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     font-weight: 600;
     transition: .75s background-color ease;
     text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
     
 }
 
@@ -258,7 +258,7 @@ nav {
 }
 
 .img-wrapper .house-image {
-    background-image: url(images/landinghouse.png);
+    background-image: url(/static/images/landinghouse.png);
     flex-grow: 1;
     min-width: 30vw;
     background-size: contain;
@@ -402,6 +402,18 @@ textarea {
     margin-top: 10px;
     }
 
+.contact ul{
+    margin-bottom: 10px;
+}
+
+.contactfont{
+    font-family: esteban, sans-serif;
+    
+}
+
+/* Contact Page Media Queries */
+
+
 @media (min-width: 583px) and (max-width: 1099px) {
     .contact {
     flex-wrap: wrap;
@@ -426,6 +438,9 @@ textarea {
     flex-wrap: wrap;
     margin: auto;
     height: 35vh;
+    }
+    .title {
+        font-size: 1em;
     }
 }
 
@@ -480,7 +495,7 @@ html{
     background: linear-gradient(to left,  #B1C0E5, #212f52);
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .form-heading{
@@ -582,6 +597,8 @@ html{
     border-bottom: 2px solid #ED9A0A;
 }
 
+/* register page media queries */
+
 @media screen and (max-width: 700px){
     .form-container::before{
         height: 10rem;
@@ -592,7 +609,7 @@ html{
         transform: translateX(-50%);
     }
 
-    form{
+    .reg-form{
         border-radius: initial;
         transform: initial;
         box-shadow: none;
@@ -716,6 +733,9 @@ header ul li{
 #btnwrap {
     text-align: center;
 }
+
+/* dashboard page media queries */
+
 @media screen and (max-width: 700px){
     .side-nav{
         display: none;
@@ -736,7 +756,7 @@ header ul li{
 
 .hero {
     min-height: 90vh;
-    background-image: url('images/construction-house-architecture-luxury-53610.jpg');
+    background-image: url('/static/images/construction-house-architecture-luxury-53610.jpg');
     background-size: cover;
     background-position: center;
     color: #18234C;
@@ -794,7 +814,7 @@ header ul li{
 
 
 .house-img {
-    background-image: url('images/whitehouse.jpg');
+    background-image: url('/static/images/whitehouse.jpg');
     background-size: cover;
     background-position: center;
     width: 300px;

@@ -30,7 +30,7 @@
 	</div>
     <div class="dashsection-wrapper"> 
 		<div class="sectionlisting">
-			<div class="listingheader">New Listing
+			<div class="listingheader">Edit Listing
 			</div>
 			<form action="{{ url_for('update_listing', listing_id=listing._id) }}" method="POST" class="dashform">
 				<div class="label-contain">
@@ -59,7 +59,7 @@
 			</form>
 		</div>
     
-<!---       {% for listing in for_sale %}
+        {% for listing in for_sale %}
         <div class="listing-wrapper">
         <ul>
             <div class="house-image">

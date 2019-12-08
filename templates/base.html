@@ -7,9 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
     
     <!-- Style Sheet -->
-    <link rel="stylesheet" href="static/style.css">
 
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='css/style.css') }}">
 
     <!-- Favicon Icons -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
@@ -41,6 +40,6 @@
     {% block content %}
     {% endblock %}
 
-<script src="static/app.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
