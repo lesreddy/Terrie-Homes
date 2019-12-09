@@ -34,7 +34,8 @@ def login():
         if (bcrypt.checkpw(request.form['pass'].encode('utf-8'), login_user['password'])):
             session['username'] = request.form['username']
             return redirect(url_for('dashboard'))
-    return 'Invalid username/password combination'
+        return flash ("Unfortunately that is an invalid username or password! Please Try Again")
+    return render_template("signin.html")
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -48,8 +49,8 @@ def register():
             session['username'] = request.form['username']
             return redirect(url_for('signin'))
         
-        return 'That username already exists!'
-
+        flash ("Username already used!")
+            
     return render_template('register.html')
 
 @app.route("/contact", methods=["GET", "POST"])
@@ -71,7 +72,7 @@ def insert_listings():
 @app.route("/edit_listing/<listing_id>")
 def edit_listing(listing_id):
     the_listing = mongo.db.for_sale.find_one({"_id": ObjectId(listing_id)})
-    return render_template("editlisting.html", listing=the_listing)
+    return render_template("editlisting.html", listing=the_listing, for_sale=mongo.db.for_sale.find())
 
 @app.route("/update_listing/<listing_id>", methods=["POST"])
 def update_listing(listing_id):

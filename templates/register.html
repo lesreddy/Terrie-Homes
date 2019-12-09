@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-
 <section id="main-form">
     <div class="wrapper">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-wrap">
+        <ul>
+                {% for message in messages %}
+                <li><span class="flashes">{{ message }}</span></li>
+                {% endfor %}
+        </ul>
+        </div>
+        {% endif %}
+        {% endwith %}
         <div class="form-container">
             <span class="form-heading">Register</span>
             <form class="reg-form" method=POST action="{{ url_for('register') }}">

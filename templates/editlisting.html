@@ -11,19 +11,7 @@
                     <div class="icon-wrap">
 						<i class="fas fa-home"></i>
                     </div>
-                    <p class="newlisting">New Listing</p>
-				</li>
-                <li class="list-style">
-                    <div class="icon-wrap">
-						<i class="fas fa-home"></i>
-                    </div>
-                    <p class="newlisting">Edit Listing</p>
-				</li>
-                <li class="list-style">
-                    <div class="icon-wrap">
-						<i class="fas fa-home"></i>
-                    </div>
-                    <p class="newlisting">Delete Listing</p>
+                    <a href="{{ url_for('dashboard') }}" class="newlisting">New Listing</a>
 				</li>
 			</ul>
 		</header>
@@ -57,49 +45,7 @@
                 	<button class="dshbtn" type="submit" name="action">Update</button>
                 </div>
 			</form>
-		</div>
-    
-        {% for listing in for_sale %}
-        <div class="listing-wrapper">
-        <ul>
-            <div class="house-image">
-            </div>     
-		    <div class="list-wrapper">
-			    <li class="list-style">
-                    <div class="icon-wrap">
-                        <i class="fas fa-address-card"></i>
-                    </div>
-                    <p class="data">{{listing.address}}</p>
-                </li>
-			    <li class="list-style">
-                    <div class="icon-wrap">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <p class="data">{{listing.property_type}}</p>
-                </li>
-			    <li class="list-style">
-                    <div class="icon-wrap">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <p class="data">{{listing.bedrooms}}</p>
-                </li>
-			    <li class="list-style">
-                    <div class="icon-wrap">
-                        <i class="fas fa-toilet"></i>
-                    </div>
-                    <p class="data">{{listing.bathrooms}}</p>
-                </li>
-			    <li id="price-style">
-                    <p class="price">{{listing.price}}</p>
-                </li>
-                <div class="btnwrap">
-                    <button class="dshbtn">Edit</button>
-                    <button class="dshbtn">Delete</button>
-                </div>
-		    </div>
-        </ul>
-        </div>
-    {% endfor %} --> 
+		</div>  
     </div>
 {% endblock %}
 
