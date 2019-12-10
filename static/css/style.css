@@ -76,7 +76,7 @@ nav {
     height: 3px;
     background-color: white;
     margin: 5px;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
 }
 
  .brand {
