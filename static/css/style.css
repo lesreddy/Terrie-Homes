@@ -849,15 +849,17 @@ header ul li{
     padding: 5px;
     color:#18234C;
     display: flex;
+    font
 
 }
-.address-style{
+.address{
     font-size: 2rem;
     text-transform: uppercase;
     font-family: esteban, sans-serif;
     padding: 5px;
     color: #18234C;
     display: flex;
+    word-wrap: break-word;
     height: 60px;
     }
 
