@@ -34,7 +34,7 @@ def login():
         if (bcrypt.checkpw(request.form['pass'].encode('utf-8'), login_user['password'])):
             session['username'] = request.form['username']
             return redirect(url_for('dashboard'))
-        return flash ("Unfortunately that is an invalid username or password! Please Try Again")
+        flash ("Unfortunately that is an invalid username or password! Please Try Again")
     return render_template("signin.html")
 
 @app.route('/register', methods=['POST', 'GET'])
