@@ -1,22 +1,26 @@
-<h1 align="center">
-  <a href= target="_blank"><img src="" alt="TW Tetris main screen"/></a>
-</h1>
-
+<div align="center">
+  <img src="https://i.ibb.co/n7fhZ2y/Terrie-Homes.png" href="https://terrie-homes.herokuapp.com/" target="_blank" rel="noopener" alt="Terrie Homes Logo" aria-label="Terrie Homes Logo" />
+</div>
+<div align="center">
+    <img src="https://i.ibb.co/W6297nY/responsive-terrie-homes-pic.png" href="http://family-hub-nl.herokuapp.com" target="_blank" rel="noopener" alt="Image of how home page looks on all screen sizes" aria-label="Image of how home page looks on all screen sizes" />
+</div>
+<br>
 
 <div align="center">  
 
-[Totally Wild Tetris](https://lesreddy.github.io/tw-tetris/) is a colourful animal themed version of the classic brick building game that was first released back in [1984!](https://en.wikipedia.org/wiki/Tetris) 
-Features include 10 levels, a realtime score, level and time update all designed in a simple and colourful way.  As a beginner developer the main purpose of this project was to improve my skills in Javascript which whilst I enjoy I currently find very challenging!
+[Terrie Homes](https://terrie-homes.herokuapp.com/) is an app designed to help people sell their house online, help potential buyers access listings and help an agent easily facilitate the sales. 
 <br>
 
-[Play the Game!]
-
+[Launch the app!](https://terrie-homes.herokuapp.com/)
 </div>
+
+
 
 ## Table of Contents
 1. [**UX**](#ux)
-    - [**Goals**](#goals)
+    - [**Developer Goals**](#developer-goals)
     - [**User Stories**](#user-stories)
+    - [**Stakeholders**](#stakeholders)
     - [**Design**](#design)
     - [**Wireframes**](#wireframes)
 
@@ -29,13 +33,11 @@ Features include 10 levels, a realtime score, level and time update all designed
     - [**Languages**](#languages)
 
 4. [**Testing**](#testing)
-    - [**Validation**](#validation)
-    - [**User Stories**](#user-stories)
-    - [**Bugs**](#bugs)
+    
 
 5. [**Deployment**](#deployment)
-    - [**From Github**](#from-github)
     - [**Running Locally**](#running-locally)
+    - [**Heroku Deployment**](#heroku-deployment)
 
 6. [**Credits**](#credits)
     - [**Media**](#media)
@@ -46,23 +48,44 @@ Features include 10 levels, a realtime score, level and time update all designed
 
 ## UX
 
-
-### Goals
+### Developer Goals
 
 The primary purpose of this page was to create a professional clean site that connects successfully to mongodb without the use of a css framework in order to strengthen my pure css knowledge and skills.
 
+### Stakeholders
+
+There are three stakeholders - The Agent(website owner) - The Seller - The Buyer
+
 ### User Stories
 
-As a user I want the following:
+As a seller I want the following:
 
-1. Clear clean design with simple functionality 
+1.  Clear clean design that is aesthetically pleasing
 
-2.  It to be aesthetically pleasing
+2.  Create an account and have my own dashboard, and then login at any time.
 
-3.  To use it as a tool to facilitate a process (ie sell a house)
+3.  To upload a listing of a house to sell, also be able to edit, delete through the dashboard.
 
-4.  Responsiveness
+4.  Upload images for the house listing
 
+4.  Work on all sized screens (Responsive)
+
+5.  Simple Functionality
+
+
+As the agent I want the following:
+
+1.  Approve any listing that comes through before the user can submit it to the manin listings page.
+
+2.  Recieve emails through the contact form and reply.
+
+3.  Have links to Social Media Pages
+
+4.  Have the ability to charge Sellers for each listing
+
+As a otential customer I want the following:
+
+5. Easily access the houses that are for sale and scroll through information and photos of them to then make contact if interested in purchasing.
 
 ### Design
 
@@ -72,23 +95,21 @@ Primary font chosen was **Montserrat** to give a jungle feel to the game and ens
 
 Secondary font was **Esteban** which contrasts well with the primary choice of font but also allows a clearer 
 
-**Background-Images**
+**Images**
 
-Each image was designed to produce a contrasting vibrant colour linked in to the totally wild theme.  Each image represents a new level and a new animal with the lion being the last level.
+Minimal use of images to match the minimalistic professional design style.  Image for the house when a user uploads a listing is just a test image.
 
 **Colour Scheme**
 
-The colour scheme is meant to potray strong bright and colourful images against a contrasting darker background.  I do believe this is achieved.
+Again, selected to create a professional simple and clean finish.
 
 
 ### Wireframes
 
 [Figma](https://www.figma.com/files/recent) was used to create the wireframes. 
 
-[Desktop-Design](https://www.figma.com/file/bOf1wSzsj5LzE6vDAgHGVa/Terrie-Homes?node-id=11%3A58) can be viewed here.
-[Mobile-Design] can be viewed here.
-
-
+[Desktop-Design](https://www.figma.com/file/bOf1wSzsj5LzE6vDAgHGVa/Terrie-Homes?node-id=0%3A1) can be viewed here.
+[Mobile-Design](https://www.figma.com/file/bOf1wSzsj5LzE6vDAgHGVa/Terrie-Homes?node-id=69%3A1) can be viewed here.
 
 ## Features
 
@@ -98,149 +119,188 @@ The colour scheme is meant to potray strong bright and colourful images against 
 
 2.  Ability to add a house listing through a user assigned dashboard.
 
-3.  Able to select different pages using the navbar, which responsively adjusts to a nice JS dropdown menu.
+3.  Able to select different pages using the navbar, which responsively adjusts into dropdown menu.
 
-4.  Login and Sign Up pages responsively adjust.
+4.  Employs basic CRUD functionality as user can create, read, update and delete their listing.
 
-5.  Contact page is operational through EmailJS
+5.  User can simulatenously create their listing in their dashboard and list it on a global listing page. (i.e. it adds on both pages).  Currently once any user adds a listing it gets sent across to the listing page underneath the main callout
 
-6.  Data added is displayed in an accordion style via the final page.
 
 ### Remaining Features to Create
 
-1. Add more features to the dashboard including an images upload section and a location API such as google to pinpoint location.
+There is much to finish on this site. I consider this to be a first stage of approximately a three stage development process.  The basic design is in place however a more features needed for it to align with the user stories listed above.
 
-2. Add the callout to the listings page using an image slider to showcase sample houses for sale (it was designed but ran out of time to implement)
+1. Add more features to the dashboard including an images upload section and a location API such as google to pinpoint location and a preview page before submitting for approval.
 
-3. Improve overall css code efficiency and quality.
+2.  Add a payment section for the user to process payment of their listing.
 
-4. Implement the best back end and front end process for the user uploading and image and then iterating through a database and then rendering it automatically on the  listing page once approved by admin.  
+3. Add a carousel to the listings page (rather than a background image) which scrolls through sample listings.  Also wire up a separate 'enquire' button for the bottom of each listing when it is added.
 
-5. Implement modals to lets the user know their listing erros such as the username already exists and also after they have successfully submitted their listing.
+4. A new page for the buyer to get more information about each listing when they click on that particular property on the listings page, such as more images of it, the location and higer detail of any other miscellaneous relevant information.
 
-6. Create Social Media Pages
+4. Implement the best back end and front end process for the user uploading and image and then iterating through the database and then rendering it automatically on the  listing page once approved by admin.  The user in the market for a house should have the ability to click on the listing and get as much information as possible through a separate screen/link/route, such as flicking through the images which the selling user has submitted.
+
+5. Rather than flash text implement modals to let the user know invalid logins and duplicated usernames on registration. Currently uses flash through flask which does not hit the intended final standard.
+
+6. Create Social Media Pages and links
+
+7. Wire up EmailJS for contact form.
+
+8. Add much more content to the listings page. I plan to add the following:
+
+* A carousel of sample listings beneath the main callout (rather than a background image)
+* Add relevant photos for the each individual listing, which can be seen when scrolling down beyond the callout to bring up more information and images.
+* Change the design so that half the page is callout and the listings can be seen as soon as you link to it.
 
 ## Applied Technologies
 
 The following technologies were used to construct the site:
 
-1. [Gitpod](https://https://www.gitpod.io/) - a lightweight but powerful cloud based editor linked through Github. 
-2. [Google Fonts](https://fonts.google.com/) - used to style the website fonts.
-3. [FontAwesome](https://fontawesome.com/) - CDN for Icons.
-4. [EmailJS](https://emailjs.com/) - A site which enables email communication directly via Javascript ensuring the contact page is fully operational without the need for server code.
-5. [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is the database for this project.
-6. [GitHub](https://github.com/) to store and share all project code remotely. 
-7. [PIP](https://pip.pypa.io/en/stable/installing/) for installation of tools needed in this project.
-8. [Git](https://git-scm.com/about) to handle version control.
+### Tools
+
+* [Gitpod](https://https://www.gitpod.io/) - a lightweight but powerful cloud based editor linked through Github. 
+* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is the database for this project.
+* [Git](https://git-scm.com/about) to handle version control.
+* [GitHub](https://github.com/) to store and share all project code remotely. 
+* [Am I Responsive](http://ami.responsivedesign.is/) to create the image in this readme file.
+* [imgbb](https://imgbb.com/) to host the logo for this readme file.
+* [PIP](https://pip.pypa.io/en/stable/installing/) for installation of tools needed in this project.
 
 ### Libraries
-
+ 
+* [Google Fonts](https://fonts.google.com/) - used to style the website fonts.
+* [FontAwesome](https://fontawesome.com/) - CDN for Icons.
+* [GitHub](https://github.com/) to store and share all project code remotely.
+* [PyMongo](https://api.mongodb.com/python/current/) to facilitate communication between Python and MongoDB.
+* [Flask](https://flask.palletsprojects.com/en/1.0.x/) to construct and render pages.
+* [Jinja](http://jinja.pocoo.org/docs/2.10/) a web template engine to simplify displaying data from the backend.
 
 
 ### Languages
 
-1. HTML - Created a file called [Index.html]
-2. CSS - Created a file called [style.css]
-3. Javascript - Created a file called [app.js]
+* HTML - Created a file called `index.html`
+* CSS - Created a file called `style.css`
+* Javascript - Created a file called `app.js`
+* Python - Created a file called `run.py` and `env.py`
 
-### Responsiveness
+## Testing
 
-Without using Bootstrap this proved challenging, however it helped me hone more skills in css and flexbox by sticking with a more pure approach.  If anything it showed me how much I still need to learn. 
-
-
-### Validation
-
-* Ran [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate the css file and also [W3C Markup Validation Service](https://validator.w3.org/) to validate the html markup.
-
-### User Stories
-
-As a user I want to
-
-1. Create an account and then log in to access my dashboard.
-
-This is achieved and the user can immediately access their dashboard.
-
-2.  Perform multiple value added tasks and gather other relevant information through the dashboard.
-
-This is not yet achieved as currently the user can only add their listing to the site.
-
-3.  Navigate through a professional clean site simply and easily.
-
-This is achieved using a professional theme and simple clear typography and design.
-
-4.  Contact the company if required.
-
-This is achieved through the contact page.
-
-5.  Use social media to get in touch
-
-This is not yet achieved, pages need to be created and links included accordingly.
-
-
-### Bugs
+Testing information can be found in separate [testing.md](testing.md) file
 
 ## Deployment
 
-### From Github
-
-This project was developed using the [VS Code](https://code.visualstudio.com/), committed to git and pushed to GitHub.
-Totally Wild Tetris can be deployed by going to the developers GitHub Repsitory [GitHub repository](https://github.com/lesreddy/) and taking the following steps:
-
-
-1. Log into Github and choose off the list of repositories **lesreddy/tw-tetris**. 
-
-2. Select **Settings** from the menu near the top of the page.
-
-4. Go to the **GitHub Pages** section. (scroll down)
-
-5. Click the drop-down menu labelled **None** and select **Master Branch** which can be found under the **Source** section.
-
-6. After selecting Master Branch the page is automatically refreshed, tw-tetris is now deployed.
-
-7. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
-
-
-
 ### Running locally
 
-To clone this project from GitHub:
+To run this project on your own IDE locally follow the instructions below:
 
-1. Follow this link to the developers [Github Repository Page](https://github.com/lesreddy/tw-tetris).
+Ensure you have the following tools: 
+- An IDE (such as VS Code or Atom)
 
-2. Click the big green button which says ```Clone or download```.
+Install the following
+- [PIP](https://pip.pypa.io/en/stable/installing/)
+- [Python 3](https://www.python.org/downloads/)
+- [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) with an up and running account
 
-3. Copy the clone URL for the repository by highlighting it with the cursor and using ```ctrl c``` or by clicking the little clipboard with an arrow on it.
-
-4. Open your terminal in your IDE.
-
-5. Change the current working directory to the location where you want the cloned directory to be made.
-
-6. Type ```git clone```, and then paste the URL you copied in Step 3.
-
-```console
-git clone https://github.com/USERNAME/REPOSITORY
+### Instructions
+1. Save a copy of the github repository located at https://github.com/lesreddy/Terrie-Homes 
+    * click the "download zip" button at the top of the page and extracting the zip file to your chosen folder.
+    * If you have Git installed on your system, you can clone the repository with the following command.
+```
+git clone https://github.com/lesreddy/Terrie-Homes
 ```
 
-7. Press Enter. Your local clone will be created.
+2. Open a terminal session in the unzip folder or change directory to the correct location.
+
+3. Use a virtual environment  the Python interpreter, to use Pythons built in virtual environment enter the command:
+```
+python -m .venv venv
+```  
+
+4. Activate the .venv with the command:
+```
+.venv\Scripts\activate 
+```
+_The above commands may differ depending on your operating system, please check the [Python Documentation](https://docs.python.org/3/) for more info_
+
+4. If needed, Upgrade pip locally with
+```
+pip install --upgrade pip.
+```
+
+5. Install all required modules with the command 
+```
+pip -r requirements.txt.
+```
+
+6. In your local IDE create a file called `.flaskenv`.
+
+7. Inside the .flaskenv file, create a SECRET_KEY variable and a MONGO_URI to link to your own database. Please make sure to call your database `Terrie-Homes`, with 2 collections called `for_sale` and `users`.
+
+8. You can now run the application with the command
+```
+python run.py
+```
+
+## Heroku Deployment
+
+1. Firstly, clone the github repository https://github.com/lesreddy/Terrie-Homes and open it up in your chosen IDE.
+
+2. Sign up to a new Heroku account and create a new app on the [Heroku website](https://dashboard.heroku.com/apps) by clicking the `New` button in your dashboard. Give it a name and set the region to Europe.
+
+3. From your newly created app in heroku click on `settings` from the menu and locate your `Heroku Git Url`. Copy it to clipboard.
+
+4. From the terminal in your IDE type in `heroku login` and ensure to login to heroku, you may have to hit any key and then click on the link or hit `Ctrl C` to do so.
+
+5. From the terinal paste in your `Heroku Git Url` and type `git remote add heroku` before it such as the example here and hit enter, this will link your git repository to heroku:
+```
+git remote add heroku https://git.heroku.com/your_app_name.git
+```
+6. From the terminal of your workspace Create a `requirements.txt` file using the terminal command
+```
+pip freeze > requirements.txt
+```
+
+7. Create a `Procfile` with the terminal command:
+```
+ echo web: python run.py > Procfile
+ ```
+
+8. Start a web process from your terminal by typing:
+```
+heroku ps:scale web=1
+```
+
+9. Commit your files git using '`git add .` and then `git commit -m` then from the terminal type `git push heroku master`, which will push your repository to heroku.
+
+10.  Open up heroku newly created heroku app and then in the dashboard click `settings` and then click the `Reveal Config Vars` button
+
+11. Set the following config vars:
+
+| Key | Value |
+ --- | ---
+IP | 0.0.0.0
+PORT | 5000
+
+12. In the heroku dashboard, click `Open App` Box
+
+13. The site is now successfully deployed.
 
 ## Credits 
  
 ### Media
 
-Images were taken from [Pexels](https://www.pexels.com/).  
-
-[Tinypng](https://tinypng.com/) was used to compress images from high res state to maintain quality.
-
-[Affinity Photo](https://affinity.serif.com/en-gb/photo/) was also used to re-size images down for implementing onto [ImgBB](https://imgbb.com) for this readme file.
+* Images were taken from [Pexels](https://www.pexels.com/).  
+* [Tinypng](https://tinypng.com/) was used to compress images from high res state to maintain quality.
+* [Affinity Photo](https://affinity.serif.com/en-gb/photo/) was also used to re-size images down for implementing onto [ImgBB](https://imgbb.com) for this readme file.
 
 ## Code 
 
+* Code for navbar was referenced from [DevEd](https://www.youtube.com/watch?v=gXkqy0b4M5g)
+* Code for Sign Up form was referenced from [Julio Codes](https://www.youtube.com/watch?v=UhvVsc2sM4s)
+* Code for login page was referenced from [Pretty Printed](https://www.youtube.com/watch?v=vVx1737auSE&t=5s)
 
 
 ## Reflections
 
-By enlarge this project has been quite difficult and at times a very frustrating process.  The idea was to utilise a purely javascript game and re-build it in my own way.  The problem was that it took me two weeks just to build the basic game engine and even after significant analysis I found it very difficult to understand the code, which costed more time than expected.  This then gave me less time and confidence to build the other elements of the game.
-
-There are still many elements to implement in order to complete it and I am not happy with the current state. I will go back and fix all the elements once I have built a better knowledge base, experience and have more time.
-
-Whilst This project gave me a great insight into how challenging coding can actually be I have come out the other end with a project that I am not overly happy with but with a much better plan on how to approach the next one and a vastly improved knowledge in javascript which was my main goal as a developer, so from that sense it was a success.  On my next project I will be keeping things very simple and building up rather than trying anything too complex and too far out of my comfort zone.
+I realise this site is far from finished but I have very much enjoyed my first venture something close to a full stack site.  On reflection, probably not the wisest call to strengthen my CSS but I am definitely much stronger with it after this project (along with all the other technologies used) but for the next project I think I will implement the bootsrap wireframe to complete the rest of the features in a much faster timeframe and a much more complete result.  Overall happy to successfully create my first site that links to a database successfully.
