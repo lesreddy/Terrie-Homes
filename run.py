@@ -34,7 +34,7 @@ def login():
         if (bcrypt.checkpw(request.form['pass'].encode('utf-8'), login_user['password'])):
             session['username'] = request.form['username']
             return redirect(url_for('dashboard'))
-        flash ("Unfortunately that is an invalid username or password! Please Try Again")
+        flash ("Invalid! Please Try Again")
     return render_template("signin.html")
 
 @app.route('/register', methods=['POST', 'GET'])
@@ -49,14 +49,14 @@ def register():
             session['username'] = request.form['username']
             return redirect(url_for('signin'))
         
-        flash ("Username already used!")
+        flash ("Username Taken! Please Try Again!")
             
     return render_template('register.html')
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        flash ("Thanks {}, we have received your message!".format(request.form["name"]))
+        flash ("Thanks {}, we have your message!".format(request.form["name"]))
     return render_template("contact.html")
 
 @app.route("/listings")

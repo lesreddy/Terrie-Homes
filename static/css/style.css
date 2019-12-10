@@ -473,7 +473,8 @@ html{
 .wrapper{
     margin: 0 auto;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-container{
@@ -506,6 +507,7 @@ html{
     position: absolute;
     top: 3.5rem;
     left: 10rem;
+    font-weight: 600;
 }
 
 .reg-form{
@@ -604,6 +606,7 @@ html{
     display: flex;
     justify-content: center;
     margin: 25px 0;
+    letter-spacing: normal;
 }
 
 .flash-wrap ul{
