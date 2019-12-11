@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!-- Landing Hero Section -->
 <section class="hero">
         <div class="callout-wrapper">
         <h1>Houses For Sale</h1>
@@ -8,6 +9,8 @@
         <a href="{{ url_for('contact') }}" class="btn4">Enquire</a>
         </div>
 </section>
+
+<!-- Listings Sectioned rendered from dashboard -->
 <main class="mainlist">
      {% for listing in for_sale %}
     <div class="listing-wrapper"> 

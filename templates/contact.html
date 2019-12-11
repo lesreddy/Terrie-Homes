@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<!-- Contact Form -->
     <section class="contact">
         <div class="contactus">
+
+        <!-- Flash Message -->
         <p class="title">Contact Us</p>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -14,9 +18,9 @@
         </div>
         {% endif %}
         {% endwith %}
-        
         </div>
         
+        <!-- Email Form -->
 		<div class="message">
             <div class="message-wrap">
             </div>
